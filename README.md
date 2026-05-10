@@ -1,10 +1,10 @@
 # Word Count Distribué - MapReduce Classique
 
-## 🎯 Projet
+## Projet
 
 Implémentation **MapReduce pure** d'un Word Count distribué avec Apache Spark pour traiter votre dataset de 1.5GB.
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 big_data/
@@ -16,7 +16,7 @@ big_data/
 └── wordcount_complet/      # Résultats de sortie
 ```
 
-## 🚀 Utilisation
+## Utilisation
 
 ### 1. Installation des dépendances
 
@@ -56,7 +56,7 @@ python download_corpus.py
 python mapreduce_classic.py
 ```
 
-## 🏗️ Architecture MapReduce
+## Architecture MapReduce
 
 ### Phase 1: Chargement Distribué
 - Fichier découpé en **49 partitions**
@@ -76,7 +76,7 @@ python mapreduce_classic.py
 - Tri par fréquence décroissante
 - Sauvegarde dans un **seul fichier CSV**
 
-## 📊 Résultats
+## Résultats
 
 ### Performance sur votre dataset
 - **Tickets générés**: 220,796,224
@@ -101,25 +101,15 @@ python mapreduce_classic.py
 - **Optimisation**: `reduceByKey` (shuffle minimal)
 - **Sérialisation**: Kryo serializer
 
-## 📋 Notes importantes
+## Notes importantes
 
-**⚠️ Dataset non inclus** : Le corpus de 1.5GB n'est pas fourni avec le projet pour des raisons de taille. Vous devez le générer vous-même avec `download_corpus.py`.
+**Dataset non inclus** : Le corpus de 1.5GB n'est pas fourni avec le projet pour des raisons de taille. Vous devez le générer vous-même avec `download_corpus.py`.
 
-**📚 Source des données** : Project Gutenberg (libre de droits)
+**Source des données** : Project Gutenberg (libre de droits)
 - 74 livres inclus par défaut (~75MB)
 - Ajoutez plus d'IDs pour atteindre 1.5GB
 - IDs disponibles sur : https://www.gutenberg.org/
 
-**⏱️ Temps de génération** :
+**Temps de génération** :
 - corpus.txt (74 livres) : ~5-10 minutes
 - corpus_1_5gb.txt (200-300 livres) : ~30-60 minutes
-
-## 📈 Caractéristiques Big Data
-
-- ✅ **Scalable**: Parallélisation automatique
-- ✅ **Memory-efficient**: Chargement par partitions
-- ✅ **Optimized**: Shuffle minimisé avec reduceByKey
-- ✅ **Production-ready**: Gestion d'erreurs et logging
-
----
-**Implémentation MapReduce classique pour apprentissage Big Data**
